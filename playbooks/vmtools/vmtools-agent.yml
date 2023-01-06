@@ -1,0 +1,9 @@
+- name: install latest vmware-tools-agent
+  hosts: "*"
+  tasks:
+    - name: install open-vm-tools-desktop
+      apt:
+        name: open-vm-tools-desktop
+        state: present
+        update_cache: true
+      become: true

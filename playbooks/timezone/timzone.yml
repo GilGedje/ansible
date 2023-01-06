@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  become_user: root
+  tasks:
+  - name: set timezone
+    shell: timedatectl set-timezone Asia/Jerusalem
